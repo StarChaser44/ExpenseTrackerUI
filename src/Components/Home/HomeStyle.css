@@ -1,0 +1,98 @@
+.heading {
+    position: absolute;
+    width: 1328px;
+    height: 100px;
+    left: 100px;
+    top: 20px;
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 102px;
+    line-height: 135px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.44em;
+    color: #606773;
+}
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner {
+    position: absolute;
+    width: 1091px;
+    height: 73px;
+    left: 200px;
+    top: 339px;
+    background: #606773;
+    display: flex;
+}
+
+.bannerText {
+    width: 1091px;
+    height: 1px;
+    margin-left: 5em;
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 0.44em;
+
+    color: #FFFFFF;
+
+}
+.signupBanner{
+    position: absolute;
+    width: 590px;
+    height: 92px;
+    left: 425px;
+    top: 500px;
+    background: #606773;
+    border-radius: 7px;
+}
+.signupBannerText{
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 40px;
+    height: 1px;
+    display: flex;
+    letter-spacing: 0.35em;
+    color: #FFFFFF;
+    margin-left: 3em;
+    align-items: center;
+    text-align: center;
+}
+
+.loginBanner{
+    position: absolute;
+    width: 590px;
+    height: 92px;
+    left: 424px;
+    top: 650px;
+    background: rgba(96, 103, 115, 0.38);
+    border-radius: 7px;
+}
+.loginBannerText{
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 45px;
+    height: 1px;
+    margin-left: 3em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.35em;
+
+    color: #FFFFFF;
+}
