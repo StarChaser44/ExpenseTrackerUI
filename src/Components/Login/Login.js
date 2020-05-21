@@ -1,7 +1,7 @@
 import React, {useState}  from 'react';
+import './Login.css';
 const githubLogo = require('../../Images/github_logo.png')
 const gmailLogo = require('../../Images/gmail_logo.png');
-import './Login.css';
 
 /**
  * Login system for the customer to access their account again

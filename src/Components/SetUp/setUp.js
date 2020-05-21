@@ -1,5 +1,5 @@
 import React from 'react';
-import './Setup.css';
+import './setUp.css';
 
 const Setup = () => {
     return(
