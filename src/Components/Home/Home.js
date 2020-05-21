@@ -17,11 +17,11 @@ const Home = () => {
             <div className="banner">
                 <p className="bannerText">It's your money, own it!</p>
             </div>
-            <div className="signupBanner">
-                <p className="signupBannerText" onClick={() => setRedirectSignup(true)}>SIGN UP!</p>
+            <div className="signupBanner" onClick={() => setRedirectSignup(true)}>
+                <p className="signupBannerText">SIGN UP!</p>
             </div>
-            <div className="loginBanner">
-                <p className="loginBannerText" onClick={() => setRedirectLogin(true)}>LOGIN</p>
+            <div className="loginBanner" onClick={() => setRedirectLogin(true)}>
+                <p className="loginBannerText">LOGIN</p>
             </div>
         </div>
     )
