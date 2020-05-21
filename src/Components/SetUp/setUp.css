@@ -1,0 +1,35 @@
+.set-form{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 3em;
+}
+
+.set-form input{
+    margin-top: 10px;
+    margin-left: auto;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+    width: 400px;
+    height: 30px;
+}
+
+.set-form p{
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#continue{
+    margin-top: 40px;   
+    background: #606773;
+    border-radius: 7px;
+    width: 400px;
+    height: 60px;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    cursor: pointer;
+}

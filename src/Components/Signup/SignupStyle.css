@@ -1,0 +1,119 @@
+.container {
+    position: absolute;
+    width: 717px;
+    height: 1000px;
+    left: 375px;
+    top: 50px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    display: flex;
+
+}
+
+.header {
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    /* identical to box height */
+    height: 3em;
+    margin-left: 0.7em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.17em;
+
+    color: #606773;
+}
+
+.smallText{
+    position: absolute;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top:10em;
+    margin-left: 16em;
+    text-align: center;
+    display: flex;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+#gmail{
+    position: absolute;
+    width: 9%;
+    top: 12em;
+    right: 18em;
+}
+
+#github{
+    position: absolute;
+    width: 10%;
+    top: 11.8em;
+    right: 24em;
+}
+
+img{
+    max-width: 100%;
+}
+
+.formContainer {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top:19em;
+    margin-left: 4em;
+}
+
+.formTextElems{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.formInputElems{
+    width: 590px;
+    height: 56px;
+    font-size: 50px;
+    color: rgba(83, 83, 83, 0.6);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#submitButton {
+    margin-top: 25px; 
+    height: 70px;
+    color: white;
+    background: #606773;
+}
+
+.submitButtonText{
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+
+    margin-top: 0px;
+    letter-spacing: 0.35em;
+
+    color: #FFFFFF;
+
+}
+
+#errorMessage{
+    position: absolute;
+    color: red;
+    top: 17em;
+    left: 17em;
+}

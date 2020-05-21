@@ -3,7 +3,7 @@
     width: 1328px;
     height: 100px;
     left: 100px;
-    top: 20px;
+    top: 55px;
     font-family: Red Hat Text;
     font-style: normal;
     font-weight: bold;
@@ -44,7 +44,7 @@
     text-align: center;
     align-items: center;
     letter-spacing: 0.44em;
-
+    margin-top: 35px;
     color: #FFFFFF;
 
 }
@@ -67,9 +67,10 @@
     display: flex;
     letter-spacing: 0.35em;
     color: #FFFFFF;
-    margin-left: 3em;
+    margin-left: 2.6em;
     align-items: center;
     text-align: center;
+    margin-top: 40px;
 }
 
 .loginBanner{
@@ -93,6 +94,7 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.35em;
+    margin-top: 47px;
 
     color: #FFFFFF;
 }
