@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loginContainer{
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 3em;
+    width: 500px;
+    height: 600px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+}
+
+h3{
+    font-family: 'Red Hat Text', sans-serif;
+    margin-top: 1.4em;
+    margin-bottom: 21px;
+    color: #606773;
+    font-size: 38px;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.assets{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.assets img{ 
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.loginStuff{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.credentials{
+    margin-top: 10px;
+}
+
+.loginForm p{
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+.loginForm input{
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+    width: 300px;
+    height: 30px;
+}
+#loginButton{
+    margin-top: 40px;
+    background: rgba(96, 103, 115, 0.38);
+    border-radius: 7px;
+    width: 300px;
+    height: 60px;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #fff;
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    cursor: pointer;
+}
