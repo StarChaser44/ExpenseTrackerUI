@@ -5,6 +5,7 @@ import Signup from './Components/Signup/Signup'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Login from './Components/Login/Login'
 import Setup from './Components/SetUp/setUp'
+import './global.css'
 function App() {
   return (
     <div>

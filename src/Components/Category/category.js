@@ -1,11 +1,14 @@
 import React from 'react';
+import './category.css';
 
 const Category = (props) => {
     return (
-        <div>
-            <img src={props.image} alt="Some Image lol" />
-            <p>{props.category}</p>
-            <p>{props.price}</p>
+        <div className="categoryContainer">
+            <div className="imgContainer">
+                <img className="images" src={props.image} alt="Some Image lol" />
+            </div>
+            <p className="categoryName">{props.category}</p>
+            <p className="categoryAmount">{props.price}</p>
         </div>
     )
 }

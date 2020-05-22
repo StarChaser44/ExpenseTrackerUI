@@ -1,0 +1,157 @@
+.budgetSetterContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 3vh;
+    margin: 50px auto;
+
+}
+
+#addBudget{
+    order: 1;
+    background-color: #FFFFFF;
+    color: green;
+    width: 20vw;
+    margin-right: 250px;
+    height: 8vh;
+    font-size: 1.3rem;
+}
+
+#removeBudget{
+    color: red;
+    background-color: #FFFFFF;
+    order: 2;
+    height:8vh;
+    width: 20vw;
+    font-size: 1.3rem;
+}
+
+.inputBox{
+    display: inline;
+}
+
+.inputField{
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.Category {
+    margin-left: 70vw;
+    margin-bottom: 5vh;
+}
+
+.expensesContainer{
+    display: flex;
+    background-color: #FFFFFF;
+    width: 58%;
+    margin: 0 auto;
+    height: 30vh;
+    flex-direction: row;
+}
+
+.expenses{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+#expensesText{
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    font-size: 23px;
+    
+}
+
+#expensesAmount{
+    min-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.limit_remaining{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vl {
+    border: 1px solid rgba(0, 0, 0, 0.27);
+    transform: rotate(90deg);
+    width: 100%;
+    color: gray;
+    border-style: inset;
+    border-width: 1px; 
+    margin: 0.5em auto;
+    height: 50%;
+}
+.remainingBalance{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#remainingBalanceAmount{
+    min-width: 100%;
+    text-align: center;
+    color: #25D016;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+#remainingAmountText{
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 23px;
+}
+
+.monthlyLimit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+#monthlyLimitAmount{
+    min-width: 100%;
+    text-align: center;
+    color: #606773;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+#monthlyLimitText{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    font-size: 23px;
+}
+
+#categoryHeader {
+    font-family: Red Hat Text;
+    font-style: normal;
+    font-weight: 500;
+    color: #606773;
+    margin-left: 20vw;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.categoryList {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    margin-left: 20vw;
+}
