@@ -3,12 +3,11 @@ import './category.css';
 
 const Category = (props) => {
     return (
-        <div className="categoryContainer">
-            <div className="imgContainer">
-                <img className="images" src={props.image} alt="Some Image lol" />
-            </div>
-            <p className="categoryName">{props.category}</p>
-            <p className="categoryAmount">{props.price}</p>
+
+        <div>
+            <img src={props.image} alt="Some Image lol" />
+            <p>{props.category}</p>
+            <span>{props.price}</span>
         </div>
     )
 }

@@ -1,157 +1,133 @@
-.budgetSetterContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    height: 3vh;
-    margin: 50px auto;
 
+.logout{
+   text-align: center;
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 8px;
+   margin-right: 20px
+}
+.logout img{
+    width: 60px;
+    cursor: pointer;
+}
+.logout p{
+    cursor: pointer;
 }
 
-#addBudget{
-    order: 1;
-    background-color: #FFFFFF;
-    color: green;
-    width: 20vw;
-    margin-right: 250px;
-    height: 8vh;
-    font-size: 1.3rem;
+.dash-name{
+    margin-top: 30px;
+    font-size: 4em;
+    letter-spacing: 0.34em;
 }
 
-#removeBudget{
-    color: red;
-    background-color: #FFFFFF;
-    order: 2;
-    height:8vh;
-    width: 20vw;
-    font-size: 1.3rem;
-}
-
-.inputBox{
-    display: inline;
-}
-
-.inputField{
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-}
-
-.Category {
-    margin-left: 70vw;
-    margin-bottom: 5vh;
-}
-
-.expensesContainer{
-    display: flex;
-    background-color: #FFFFFF;
-    width: 58%;
+.totalBudget{
+    background-color: #606773;
+    width: 35em;
     margin: 0 auto;
-    height: 30vh;
-    flex-direction: row;
-}
-
-.expenses{
-    color: red;
+    margin-top: 40px;
     display: flex;
-    justify-content: center;
-    align-self: center;
-    width: 50%;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.1em;
+    color: #fff;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+    border-radius: 9px;
+    cursor: pointer;
 }
 
-#expensesText{
-    font-family: Red Hat Text;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    font-size: 23px;
-    
+.total{
+    font-size: 2em;
 }
 
-#expensesAmount{
-    min-width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 23px;
+.money{
+    font-size: 3em;
 }
 
-.limit_remaining{
+.dashboard-content{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.expense-section{
+    font-family: 'Red Hat Text', sans-serif;
+    width:100%;
+    background-color: #F8F8F8;
+    padding: 30px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: space-around;
 }
-
-.vl {
+.line{
     border: 1px solid rgba(0, 0, 0, 0.27);
-    transform: rotate(90deg);
-    width: 100%;
-    color: gray;
-    border-style: inset;
-    border-width: 1px; 
-    margin: 0.5em auto;
-    height: 50%;
+    width: 0px;
+    height: 7em;
 }
-.remainingBalance{
+.leftSide{
+    font-weight: 700;
+    color: #F15858;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    width: 300px;
+    text-align: center;
+}
+.leftSide span{
+    font-size: 2em;
 }
 
-#remainingBalanceAmount{
-    min-width: 100%;
+.rightSide{
+    display: flex;
+    color: #606773;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
     text-align: center;
+}
+.rightSide span{
+    font-size: 1.6em;
+    letter-spacing: 0.22em;
+}
+.remaining span{
     color: #25D016;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 23px;
 }
 
-#remainingAmountText{
-    color: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    font-size: 23px;
+.categories{
+   margin-top: 40px;
 }
-
-.monthlyLimit{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2vw;
-}
-
-#monthlyLimitAmount{
-    min-width: 100%;
-    text-align: center;
+.category-title{
     color: #606773;
-    margin-bottom: 10px;
-    font-size: 23px;
+    font-size: 2em;
+    margin-bottom: 35px;
 }
-#monthlyLimitText{
-    text-align: center;
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: bold;
-    font-size: 23px;
+.categories p{
+    font-family: 'Red Hat Text', sans-serif;
 }
-
-#categoryHeader {
-    font-family: Red Hat Text;
-    font-style: normal;
-    font-weight: 500;
-    color: #606773;
-    margin-left: 20vw;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-}
-
-.categoryList {
-    display: flex;
+.categories ul{
     list-style: none;
-    flex-direction: row;
-    margin-left: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+.categories li{
+    background-color: #F8F8F8;
+    text-align: center;
+    width: 138px;
+    border-radius: 10px;
+    padding: 12px;
+}
+.categories li:hover .hidden{
+    display: block;
+    transform: scale(1.1);
+}
+.categories span{
+    font-size: 25px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+}
+.hidden{
+    display: none;
+    font-size: 12px;
+    margin-top: 8px;
+    transition: all 0.5s ease;
 }

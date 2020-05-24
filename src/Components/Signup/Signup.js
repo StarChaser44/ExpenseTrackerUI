@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router';
 import './SignupStyle.css'
+import app from '../../utils/Firebase';
 const githubLogo = require("../../Images/github_logo.png")
 const gmailLogo = require('../../Images/gmail_logo.png')
 
 /**
  * Signs up customer with our service via manual sign up, gmail, or github
 */
-const Signup = () => {
+const Signup = (props) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(false);
-
-
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if(password !== confirmPassword){
             setErrorMessage(true);
         } else {
             setErrorMessage(false)
-            alert("Thank you for signing up");
+            try{
+                await app.auth().createUserWithEmailAndPassword(email, password);
+                await props.history.push("/Dashboard");
+            }catch(e){
+                console.log(e)
+            }
         }
     }
     return (
@@ -58,4 +64,4 @@ const Signup = () => {
     )
 }
 
-export default Signup;
+export default withRouter(Signup);

@@ -1,81 +1,108 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router';
+import app from '../../utils/Firebase';
+//these are all the images that we are importing
 import Category from '../Category/category'
 import groceries from '../../Images/groceries.png';
 import entertainment from '../../Images/entertainment.png';
 import transportation from '../../Images/transportation.png';
 import clothes from '../../Images/clothes.png';
 import other from '../../Images/other.png';
-import './DashboardStyle.css'
-const Dashboard = () => {
+import logout from '../../Images/logout.png';
+import './DashboardStyle.css';
+
+const Dashboard = (props) => {
     const [category, setCategory] = useState('');
     const [addToBudget, setAddToBudget] = useState('');
     const [removeFromBudget, setRemoveFromBudget] = useState('');
 
+    const handleLogout = async () => {
+        try{
+            await app.auth().signOut();
+            console.log("signed out successfully");
+            props.history.push('/login');
+        } catch(e) {
+            console.log(e);
+        }
+    };
+
     return (
         <div>
-            <div className="budgetSetterContainer">
-                <div id="addBudget">
-                    <p>Add to budget</p>
-                    {/* This is just a spacer for the add to budget and input field */}
-                    <div style={{margin: '5px'}}></div> 
-                    <p className="inputBox">$</p>
-                    <input className="inputField" type='text' onChange= {(e) => setAddToBudget(e.target.value)}/>
-                </div>
-                <div id="removeBudget">
-                    <p>Remove from budget</p>
-                    {/* This is just a spacer for the remove from budget and input field */}
-                    <div style={{margin: '5px'}}></div>
-                    <p className="inputBox">$</p>
-                    <input className="inputField" type='text' onChange= {(e) => setRemoveFromBudget(e.target.value)} />
+            <div className="logout">
+                <div onClick={handleLogout}>
+                    <img src={logout} alt="logout button" />
+                    <p>Logout</p>
                 </div>
             </div>
-                <div className="Category">
-                    <select name="categories" onChange={(e) => setCategory(e.target.value)}>
-                        <option value="Categories" selected="selected">Categories</option>
-                        <option value="Groceries">Groceries</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Transportation">Transportation</option>
-                        <option value="Clothes &amp; Shoes">Clothes &amp; Shoes</option>
-                        <option value="Other">Other</option>
-                    </select>
+            <h3 className="dash-name">welcome <span>godwin</span>!</h3>
+            <div className="totalBudget">
+                <div>
+                    <p className="total">Total Income</p>
+                    <p>Click to change budget</p>
                 </div>
-        
-            <div className="expensesContainer">
-
-                <div className="expenses">
-                    <p id="expensesAmount">$-337.08</p>
-                    <p id="expensesText">Expenses</p>
-                </div>
-                <hr className=".vl"></hr>
-
-                <div className="limit_remaining">
-
-                    <div className="monthlyLimit">
-                        <p id="monthlyLimitAmount">$500</p>
-                        <p id="monthlyLimitText">Monthly Limit</p>
-                    </div>
-
-                    <div className="remainingBalance">
-                        <p id="remainingBalanceAmount">$163</p>
-                        <p id="remainingAmountText">Remaining</p>
-                    </div>
-                </div>
-
+                <p className="money">$2,350.57</p>
             </div>
-            <div>
-                <h2 id="categoryHeader">Categories</h2>
-                <div className="categoriesContainer">
-                    <ul className="categoryList">
-                        <li className="CategoryItem"><Category image={groceries} category="Groceries" price="$240.79" /></li>
-                        <li className="CategoryItem"><Category image={entertainment} category="Entertainment" price="$71.29" /></li>
-                        <li className="CategoryItem"><Category image={transportation} category="Transportation" price="$25.00" /></li>
-                        <li className="CategoryItem"><Category image={clothes} category="Clothes &amp; Shoes" price="$0" /></li>
-                        <li className="CategoryItem"><Category image={other} category="Other" price="$0" /></li>
-                    </ul>
+            <div className="dashboard-content">
+                <div className="addAndRemove">
+                    <div></div>
+                </div>
+                <div className="expense-section">
+                    <div className="leftSide">
+                        <span>$-337.08</span>
+                        <p>Expenses</p>
+                    </div>
+                    <div className="line"></div>
+                    <div className="rightSide">
+                        <div className="month-limit">
+                            <span>$500</span>
+                            <p>Monthly Limit</p>
+                        </div>
+                        <div className="remaining">
+                            <span>$163</span>
+                            <p>Remaining</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div className="categories">
+                        <p className="category-title">Categories</p>
+                        <ul>
+                            <li>
+                                <Category image={groceries} category="Groceries" price="$240.79" />
+                                <p className="hidden">
+                                    This includes things like groceries and fastfood!
+                                </p>
+                            </li>
+                            <li>
+                                <Category image={entertainment} category="Entertainment" price="$71.29" />
+                                <p className="hidden">
+                                    This includes movies, Netflix, all the expenses you watch!
+                                </p>
+                            </li>
+                            <li>
+                                <Category image={transportation} category="Transportation" price="$25.00" />
+                                <p className="hidden">
+                                    This includes gas, 
+                                </p>
+                            </li>
+                            <li>
+                                <Category image={clothes} category="Clothes" price="$0" />
+                                <p className="hidden">
+                                    This includes shoes, clothes, all the designer you buy!
+                                </p>
+                            </li>
+                            <li>
+                                <Category image={other} category="Other" price="$0" />
+                                <p className="hidden">
+                                    This includes 
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

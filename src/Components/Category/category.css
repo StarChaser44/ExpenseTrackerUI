@@ -1,33 +1,3 @@
-.categoryContainer{
-    
-    margin-bottom: 3vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 3vw;
-    background-color: #FFFFFF;
-    height: 15vh;
-    width: 8vw;
-}
-img {
-    max-width: 100%;
-    height: 8vh;
-    width: 8vh;
-}
-
-.categoryName{
-    width: 100%;
-    text-align: center;
-    font-family: Red Hat Text;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.7rem;
-}
-
-.categoryAmount{
-    text-align: center;
-    font-family: Red Hat Text;
-    font-style: normal;
-    font-weight: bold;
+img{
+    width: 84px;
 }
