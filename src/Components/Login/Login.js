@@ -11,16 +11,28 @@ const gmailLogo = require('../../Images/gmail_logo.png');
 const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState(''); 
-    const [errorMessage, setErrorMessage] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [showErrorMessage, setShowErrorMessage] = useState(false)
     
     const handleLogin = async (e) => {
         e.preventDefault();
+        const errorMessages = ["Invalid Email", "Incorrect Password"]
         try{
             await app.auth().signInWithEmailAndPassword(email, password);
             console.log('successfully signed in!');
             await props.history.push('/Dashboard');
         } catch (e) {
-            console.log(e);
+            switch(e.code){
+                case "auth/wrong-password":
+                    setErrorMessage("Incorrect Password");
+                    break;
+                case "auth/user-not-found":
+                    setErrorMessage("Email or Password is incorrect");
+                    break;
+                default:
+                    console.log(e.code);
+            }
+            setShowErrorMessage(true);
         }
     }
     return(
@@ -31,6 +43,11 @@ const Login = (props) => {
                     <img src={githubLogo} alt="github logo"/>
                     <img src={gmailLogo} alt="gmail logo" />
                 </div>
+                <p className="errorMessage">{
+                            showErrorMessage ? errorMessage :
+                            null
+                        }
+                </p>
                 <div className="loginStuff">
                     <form className="loginForm" onSubmit={handleLogin}>
                         <div className="credentials">

@@ -42,6 +42,7 @@ h3{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
 }
 
 .credentials{
@@ -72,4 +73,8 @@ h3{
     text-transform: uppercase;
     letter-spacing: 0.35em;
     cursor: pointer;
+}
+.errorMessage{
+    color: red;
+    text-align: center;
 }
