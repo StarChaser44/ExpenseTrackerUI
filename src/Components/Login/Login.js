@@ -1,6 +1,6 @@
 import React, {useState}  from 'react';
 import { withRouter } from 'react-router';
-import app from '../../utils/Firebase';
+import FireBaseApp from '../../utils/Firebase';
 import './Login.css';
 const githubLogo = require('../../Images/github_logo.png')
 const gmailLogo = require('../../Images/gmail_logo.png');
@@ -16,9 +16,8 @@ const Login = (props) => {
     
     const handleLogin = async (e) => {
         e.preventDefault();
-        const errorMessages = ["Invalid Email", "Incorrect Password"]
         try{
-            await app.auth().signInWithEmailAndPassword(email, password);
+            await FireBaseApp.firebase.auth().signInWithEmailAndPassword(email, password);
             console.log('successfully signed in!');
             await props.history.push('/Dashboard');
         } catch (e) {

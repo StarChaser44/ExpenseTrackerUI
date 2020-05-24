@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router';
 import './SignupStyle.css'
 import '../Login/Login.css'
-import app from '../../utils/Firebase';
+import FireBaseApp from '../../utils/Firebase';
 const githubLogo = require("../../Images/github_logo.png")
 const gmailLogo = require('../../Images/gmail_logo.png')
 
@@ -19,7 +19,10 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            await app.auth().createUserWithEmailAndPassword(email, password);
+            await FireBaseApp.firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(
+                (res) =>{ res.user.updateProfile({displayName: username})}
+            )
             await props.history.push("/Dashboard");
         }catch(e){
             if(password !== confirmPassword){
