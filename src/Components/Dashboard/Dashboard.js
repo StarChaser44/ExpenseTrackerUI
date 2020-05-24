@@ -1,5 +1,6 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { withRouter } from 'react-router';
+import app from '../../utils/Firebase';
 //these are all the images that we are importing
 import Category from '../Category/category'
 import groceries from '../../Images/groceries.png';
@@ -8,14 +9,27 @@ import transportation from '../../Images/transportation.png';
 import clothes from '../../Images/clothes.png';
 import other from '../../Images/other.png';
 import logout from '../../Images/logout.png';
-
 import './DashboardStyle.css';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+    const [category, setCategory] = useState('');
+    const [addToBudget, setAddToBudget] = useState('');
+    const [removeFromBudget, setRemoveFromBudget] = useState('');
+
+    const handleLogout = async () => {
+        try{
+            await app.auth().signOut();
+            console.log("signed out successfully");
+            props.history.push('/login');
+        } catch(e) {
+            console.log(e);
+        }
+    };
+
     return (
         <div>
             <div className="logout">
-                <div>
+                <div onClick={handleLogout}>
                     <img src={logout} alt="logout button" />
                     <p>Logout</p>
                 </div>
@@ -91,4 +105,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

@@ -1,14 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Red+Hat+Text:wght@700&display=swap');
 .container {
-    position: absolute;
-    width: 717px;
-    height: 1000px;
-    left: 375px;
-    top: 50px;
+    width: 600px;
+    height: 700px;
     margin: 0 auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     border-radius: 13px;
-    display: flex;
+    margin-top: 2em;
 
 }
 
@@ -16,46 +14,42 @@
     font-family: Red Hat Text;
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 64px;
-    /* identical to box height */
-    height: 3em;
-    margin-left: 0.7em;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    font-size: 40px;
+    height: 1.5em;
     letter-spacing: 0.17em;
-
     color: #606773;
+    width: 100%;
+    padding-top: 0.5em;
 }
 
 .smallText{
-    position: absolute;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 20px;
-    margin-top:10em;
-    margin-left: 16em;
-    text-align: center;
-    display: flex;
     color: rgba(0, 0, 0, 0.6);
+    margin-top: 2em;
+}
 
+.imgContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 #gmail{
-    position: absolute;
-    width: 9%;
-    top: 12em;
-    right: 18em;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 15px;
 }
 
 #github{
-    position: absolute;
-    width: 10%;
-    top: 11.8em;
-    right: 24em;
+    width: 60px;
+    margin-right: 10px;
 }
 
 img{
@@ -64,24 +58,20 @@ img{
 
 .formContainer {
     display: flex;
-    position: absolute;
-    flex-direction: column;
-    top:19em;
-    margin-left: 4em;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
-
 .formTextElems{
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
-    line-height: 27px;
-
     color: rgba(0, 0, 0, 0.6);
 }
 
 .formInputElems{
-    width: 590px;
+    width: 90%;
     height: 56px;
     font-size: 50px;
     color: rgba(83, 83, 83, 0.6);
@@ -93,27 +83,28 @@ img{
 
 #submitButton {
     margin-top: 25px; 
-    height: 70px;
+    height: 50px;
     color: white;
     background: #606773;
-}
-
-.submitButtonText{
-    font-family: Red Hat Text;
+    font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: bold;
-    font-size: 50px;
-
-    margin-top: 0px;
-    letter-spacing: 0.35em;
-
+    font-size: 40px;
+    letter-spacing: 0.22em;
     color: #FFFFFF;
-
+    text-align: center;
+    border-radius: 7px;
+    width: 300px;
+    height: 60px;
+    font-size: 38px;
 }
 
 #errorMessage{
-    position: absolute;
     color: red;
-    top: 17em;
-    left: 17em;
+    text-align: center;
+}
+
+.headerContainer{
+    text-align: center;
+    width: 100%;
 }
