@@ -11,7 +11,7 @@ import clothes from '../../Images/clothes.png';
 import other from '../../Images/other.png';
 import logout from '../../Images/logout.png';
 import './DashboardStyle.css';
-import Test from './test'
+import DashboardUI from './DashboardUI'
 
 const Dashboard = (props) => {
     const [category, setCategory] = useState('');
@@ -30,7 +30,7 @@ const Dashboard = (props) => {
         }
     };
 
-    if(renderTest) return <Test user={currentUser} />
+    if(renderTest) return <DashboardUI user={currentUser} />
 
     return (
        <div>

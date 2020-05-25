@@ -6,7 +6,7 @@ import Dashboard from './Components/Dashboard/Dashboard'
 import Login from './Components/Login/Login'
 import Setup from './Components/SetUp/setUp'
 import { AuthProvider } from './Auth';
-import PrivateRoute from './utils/PrivateRoutes';
+import PrivateRoute from './utils/PrivateRoute';
 import './global.css'
 function App() {
   return (
