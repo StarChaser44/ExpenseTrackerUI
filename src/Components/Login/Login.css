@@ -37,7 +37,12 @@ h3{
     height: 50px;
     cursor: pointer;
 }
-
+.loginErrorMessage {
+    padding-top: 10%;
+    text-align: center;
+    color: red;
+    font-size: 1.3rem;
+}
 .loginStuff{
     display: flex;
     flex-direction: row;

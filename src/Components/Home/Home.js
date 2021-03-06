@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './HomeStyle.css'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 /** 
  * Landing page for all users who start the application 
 */

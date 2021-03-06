@@ -1,5 +1,8 @@
 import React from 'react';
 
+import {app} from '../../Utils/Firebase';
+
+
 //these are all the images that we are importing
 import Category from '../Category/category'
 import groceries from '../../Images/groceries.png';
@@ -7,16 +10,36 @@ import entertainment from '../../Images/entertainment.png';
 import transportation from '../../Images/transportation.png';
 import clothes from '../../Images/clothes.png';
 import other from '../../Images/other.png';
-import logout from '../../Images/logout.png';
+import logoutImg from '../../Images/logout.png';
 
 import './DashboardStyle.css';
 
-const Dashboard = () => {
+
+const Dashboard = (props: any) => {
+
+    app.auth().onAuthStateChanged(function(user : any) {
+        if(user){
+            console.log(user);
+        }else{
+            console.log("There is no user logged in");
+        }
+    })
+
+    const handleLogOut = async (e: any) => {
+        app.auth().signOut()
+        .then(() => {
+            console.log("Successfuly signed out");
+            props.history.push('/')
+        }).catch((error : any) => {
+            console.log(error);
+        })
+    }
+    
     return (
         <div>
             <div className="logout">
                 <div>
-                    <img src={logout} alt="logout button" />
+                    <img src={logoutImg} alt="logout button" onClick = {handleLogOut}/>
                     <p>Logout</p>
                 </div>
             </div>
